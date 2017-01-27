@@ -6,15 +6,18 @@ import ReactDOM from "react-dom";
 import {Router, Route, hashHistory} from 'react-router';
 //Import custom components
 import Home from "./common/home.jsx";
-import {About} from "./common/about.jsx";
-import {Car} from "./car/car.jsx";
+import About from "./common/about.jsx";
+import Main from "./common/main.jsx";
+import Car from "./car/car.jsx";
 
 
 ReactDOM.render(
     <Router history={hashHistory}>
-        <Route path="/" component={Home}/>
-        <Route path="/car" component={Car}/>
-        <Route path="/about" component={About}/>
+        <Route component={Main}>
+            <Route path="/" component={Home}/>
+            <Route path="/car" component={Car}/>
+            <Route path="/about" component={About}/>
+        </Route>
     </Router>,
     document.getElementById('container')
 );
