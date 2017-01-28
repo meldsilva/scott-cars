@@ -9,6 +9,7 @@ import Home from "./common/home.jsx";
 import About from "./common/about.jsx";
 import Main from "./common/main.jsx";
 import Car from "./car/car.jsx";
+/* remeber to use import Car not import {Car} pattern*/
 
 
 ReactDOM.render(
